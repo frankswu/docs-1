@@ -1,15 +1,13 @@
-# Fuchsia
+# Dahlia OS
 
-Pink + Purple == Fuchsia (a new Operating System)
-
-Welcome to Fuchsia! This document has everything you need to get started with
-Fuchsia.
+Welcome to Dahlia! This document has everything you need to get started with
+Dahlia.
 
 *** note
-NOTE: The Fuchsia source includes
+NOTE: The Dahlia source includes
 [Zircon](/zircon/README.md),
-the core platform that underpins Fuchsia.
-The Fuchsia build process will build Zircon as a side-effect;
+the core platform that underpins Fuchsia / Dahlia.
+The Dahlia build process will build Zircon as a side-effect;
 to work on Zircon only, read and follow Zircon's
 [Getting Started](/zircon/docs/getting_started.md)
 doc.
@@ -43,7 +41,7 @@ sudo apt-get install build-essential curl git python unzip
 Follow [the instructions to get the Fuchsia source](development/source_code/README.md)
 and then return to this document.
 
-## Build Fuchsia
+## Build Dahlia
 
 Note: A quick overview of the basic build-and-pave workflow can be found [here](development/workflows/build_and_pave_quickstart.md).
 
@@ -99,11 +97,11 @@ To override the default behaviors, pass flags to `fx set`:
 --no-goma    # disable use of goma
 ```
 
-## Boot Fuchsia
+## Boot Dahlia
 
 ### Installing and booting from hardware
 
-To get Fuchsia running on hardware requires using the paver, which these
+To get Dahlia running on hardware requires using the paver, which these
 [instructions](development/workflows/paving.md) will help you get up and running
 with.
 
@@ -160,7 +158,7 @@ fx run -N -u $FUCHSIA_SCRIPTS_DIR/start-dhcp-server.sh
 The `-u` flag runs a script that sets up a local DHCP server and NAT to
 configure the IPv4 interface and routing.
 
-## Explore Fuchsia
+## Explore Dahlia
 
 When Fuchsia has booted and displays the "$" shell prompt, you can run programs!
 
@@ -170,7 +168,7 @@ For example, to receive deep wisdom, run:
 fortune
 ```
 
-To shutdown or reboot Fuchsia, use the `dm` command:
+To shutdown or reboot Dahlia, use the `dm` command:
 
 ```
 dm help
@@ -179,7 +177,7 @@ dm shutdown
 
 ### Change some source
 
-Almost everything that exists on a Fuchsia system is stored in a Fuchsia
+Almost everything that exists on a Dahlia system is stored in a Fuchsia
 package. A typical development
 [workflow](development/workflows/package_update.md) involves re-building and
 pushing Fuchsia packages to a development device or QEMU virtual device.
@@ -193,13 +191,13 @@ running:
 fx serve -v
 ```
 
-Re-build and push the rolldice package to a running Fuchsia device with:
+Re-build and push the rolldice package to a running Dahlia device with:
 
 ```
 fx build-push rolldice
 ```
 
-From a shell prompt on the Fuchsia device, run the updated rolldice component
+From a shell prompt on the Dahlia device, run the updated rolldice component
 with:
 
 ```
@@ -208,7 +206,7 @@ rolldice
 
 ### Select a tab
 
-Fuchsia shows multiple tabs after booting [with graphics
+Dahlia shows multiple tabs after booting [with graphics
 enabled](#enabling-graphics). The currently selected tab is highlighted in
 yellow at the top of the screen. You can switch to the next tab using Alt-Tab on
 the keyboard.
@@ -235,7 +233,7 @@ Source code for Mozart example apps is [here](/garnet/examples/ui).
 
 When you launch something that uses Mozart, uses hardware-accelerated graphics, or if you build
 the [default](https://fuchsia.googlesource.com/topaz/+/master/packages/default) package (which will
-boot into the Fuchsia System UI), Fuchsia will enter "graphics mode", which will not display any
+boot into the Fuchsia System UI), Dahlia will enter "graphics mode", which will not display any
 of the text shells. In order to use the text shell, you will need to enter "console mode" by
 pressing Alt-Escape. In console mode, Alt-Tab will have the behavior described in the previous
 section, and pressing Alt-Escape again will take you back to the graphical shell.
@@ -268,7 +266,7 @@ You may wish to peruse the [testing FAQ](development/workflows/testing_faq.md).
 
 ## Additional helpful documents
 
-* [Fuchsia documentation](README.md) hub
+* [Dahlia documentation](README.md) hub
 * Working with Zircon - [copying files, network booting, log viewing, and
 more](/zircon/docs/getting_started.md#Copying-files-to-and-from-Zircon)
 * [Information on the system bootstrap component](/garnet/bin/sysmgr/).
