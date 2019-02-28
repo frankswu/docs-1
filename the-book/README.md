@@ -1,15 +1,15 @@
-# Fuchsia is not Linux
+# Dahlia is not Linux
 _A modular, capability-based operating system_
 
-This document is a collection of articles describing the Fuchsia operating system,
+This document is a collection of articles describing the Dahlia operating system,
 organized around particular subsystems. Sections will be populated over time.
 
 [TOC]
 
 ## Zircon Kernel
 
-Zircon is the microkernel underlying the rest of Fuchsia. Zircon
-also provides core drivers and Fuchsia's libc implementation.
+Zircon is the microkernel underlying the rest of Dahlia. Zircon
+also provides core drivers and Dahlia's libc implementation.
 
  - [Concepts][zircon-concepts]
  - [System Calls][zircon-syscalls]
