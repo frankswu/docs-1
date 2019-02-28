@@ -1,14 +1,14 @@
-# Putting Fuchsia on a Device
+# Putting Dahlia on a Device
 
-One of the best ways to experience Fuchsia is by running it on actual hardware.
-This guide will help you get Fuchsia installed on your device. Fuchsia has good
+One of the best ways to experience Dahlia is by running it on actual hardware.
+This guide will help you get Dahlia installed on your device. Dahlia has good
 support for a few different hardware platforms including the Acer Switch 12,
 Intel NUC, and Google Pixelbook (not to be confused with the Chromebook Pixel).
 The install process is not currently compatible with ARM-based targets. The
-Fuchsia install process, called 'paving', requires two machines, the machine on
-which you want to run Fuchsia ("target") and the machine on which you build
-Fuchsia ("host"). Host and target must be able to communicate over a local area
-network. On your host system you will build Fuchsia, create a piece of install
+Dahlia install process, called 'paving', requires two machines, the machine on
+which you want to run Dahlia ("target") and the machine on which you build
+Dahlia ("host"). Host and target must be able to communicate over a local area
+network. On your host system you will build Dahlia, create a piece of install
 media, and stream a large portion of the system over the network to the target.
 
 The `fx` command will be used throughout these instructions. If you have fx
@@ -28,7 +28,7 @@ for a workflow summary.
 
 ## Building
 
-Detailed instructions for obtaining and building Fuchsia are available from the
+Detailed instructions for obtaining and building Dahlia are available from the
 [Getting Started](/getting_started.md) guide, but we'll assume here that the
 target system is x86-based and that you want to build a complete system. To
 configure our build for this we can run `fx set x64` and then build with
@@ -78,7 +78,7 @@ started with `fx pave`
 In some cases paving may fail because you have a disk layout that is incompatible.
 In these cases you will see a message that asks you to run
 'install-disk-image wipe'. If it is incompatible because it contains an older
-Fuchsia layout put there by installer (vs the paver) you can fix this by killing
+Dahlia layout put there by installer (vs the paver) you can fix this by killing
 the fx pave process on the host, switching to a different console (Alt+F3) on
 the target, and running `install-disk-image wipe`. Then reboot the target,
 re-run `fx pave` on the host, and the pave should succeed.
